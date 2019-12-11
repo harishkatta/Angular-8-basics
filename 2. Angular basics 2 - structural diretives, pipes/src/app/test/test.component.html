@@ -1,0 +1,31 @@
+<!------------ ngIf ----------------->
+<div>
+    <h2 *ngIf="true"> Angular code</h2>
+    <h2 *ngIf="displayName; then  thenBlock; else elseBlock"></h2>
+</div>
+<ng-template #thenBlock>
+    <h3>then block</h3>
+</ng-template>
+<ng-template #elseBlock>
+    <h3> else block</h3>
+</ng-template>
+
+
+<!-- ------------ ngSwitch-------------->
+<div [ngSwitch]="pickcolor">
+    <div *ngSwitchCase="'color1'"> You picked color1</div>
+    <div *ngSwitchCase="'color2'"> You picked color2</div>
+    <div *ngSwitchDefault> Please select any color</div>
+</div>
+
+<!--------------ngFor-------------->
+<p>first -- last -- index--- odd -- even -- fruit</p>
+<div *ngFor="let fruit of Fruits;
+        index as i;
+        first as f;
+        last as l;
+        odd as o;
+        even as e">
+    <li>{{f}} - {{l}} -- {{i}} -- {{o}} --- {{e}} -- {{fruit}}</li>
+
+</div>

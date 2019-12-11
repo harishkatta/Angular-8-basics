@@ -1,0 +1,26 @@
+<div>------pipes -----------></div>
+<p>{{ title | lowercase }}</p>
+<p>{{ title | uppercase }}</p>
+<p>{{ title | titlecase }}</p>
+
+<!------ Parameterizing pipe -------->
+<p>{{ title | slice: 0:2 }}</p>
+<p>{{ title | slice: 0:10 }}</p>
+<!-- 1.2-3 i.e 1- min integer & min 2 digits in decimal place and 3 max  decimal place-->
+
+<p>{{ 5.456 | number: "1.2-3" }}</p>
+<p>{{ 5.456 | number: "3.4-5" }}</p>
+<p>{{ 5.456 | number: "3.1-2" }}</p>
+
+
+<p>{{ person | json }}</p>
+<p>{{ 0.25 | percent }}</p>
+<p>{{ 0.25 | currency }}</p>
+<p>{{ 0.25 | currency: "INR" }}</p>
+<p>{{ 0.25 | currency: "GBP":"code" }}</p>
+<p>{{ date }}</p>
+<p>{{ date | date: "short" }}</p>
+
+
+<!-- custom pipe-->
+{{productCode | lowercase | convertToSpaces: '-'}}

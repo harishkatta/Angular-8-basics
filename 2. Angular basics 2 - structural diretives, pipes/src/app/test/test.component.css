@@ -1,0 +1,15 @@
+div {
+    color: blue;
+}
+
+.text-success {
+    color: green;
+}
+
+.text-special {
+    font-style: italic;
+}
+
+.text-danger {
+    color: red;
+}

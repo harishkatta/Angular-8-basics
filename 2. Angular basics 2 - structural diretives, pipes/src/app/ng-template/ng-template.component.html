@@ -1,0 +1,16 @@
+<div>
+    <!-- it will not load, it's just defined but not used any where i.e referenced-->
+    <ng-template>
+        <button class="tab-button" (click)="login()">{{loginText}}</button>
+        <button class="tab-button" (click)="signUp()">{{signUpText}}</button>
+    </ng-template>
+</div>
+
+<div>
+    <!-- here we are referencing -->
+    <p *ngIf="true; then loading"></p>
+    <ng-template #loading>
+        <button class="tab-button" (click)="login()">{{loginText}}</button>
+        <button class="tab-button" (click)="signUp()">{{signUpText}}</button>
+    </ng-template>
+</div>

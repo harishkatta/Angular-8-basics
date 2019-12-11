@@ -1,0 +1,80 @@
+<!-- interpolation -->
+
+<div>
+    <p>
+        Hello from {{ title }}
+    </p>
+    <p>
+        {{ 2 + 2 }} {{ title.length }} {{ title.toUpperCase() }}
+    </p>
+    <h5>{{"Welcome " + title}}</h5>
+    <!-- string concat -->
+    <h5>{{greet()}}</h5>
+    <!-- <h5>{{a = 2+2}}</h5>   can't assign  -->
+    <!-- <h5>{{window.location.href}}</h5> can't access window, document properties of dom directly here -->
+    {{url}}
+</div>
+
+
+
+
+<!-- property binding  -->
+
+<div>
+    <!-- interpolation only accept string values -->
+    <input [id]="myId" value="harish">
+    <input id="{{myId}}" value="harish">
+</div>
+<!-- but if we want to work booean propertie like HTML disable property Binding helps us -->
+
+<div>
+    <input [disabled]="isDisabled" value="harish">
+    <!-- it's not disable -->
+    <input disabled value="harish">
+    <!-- it will disable -->
+    <input disabled="false" value="harish">
+    <!-- but it doesn't disabel -->
+</div>
+
+
+
+<!-- class binding -->
+<!-- conditioned based class-->
+<div>
+    <h5 class="text-special text-danger">class binding</h5>
+    <h5 [class]="successClass">class binding</h5>
+    <h5 class="text-danger" [class]=" successClass ">class binding</h5>
+    <!-- it will override the html class danger -->
+
+    <h5 [ngClass]="messageClasses ">class binding</h5>
+    <!-- ngClass directive provides condition based class-->
+
+</div>
+
+
+
+<!--Style binding-->
+<!-- used to apply inline styles-->
+<h5 [style.color]="'red'">style binding</h5>
+<h5 [style.color]="hasError ? 'red': 'Green'">style binding</h5>
+<h5 [style.color]="higLightColor">style binding higLightColor</h5>
+<h5 [ngStyle]="styleBinding">ngStyle binding</h5>
+
+<!-- Event binding-->
+<div> Event binding
+    <button (click)="doGreet($event)">Greet</button>
+    <button (click)="greetMessage = 'hello'">Greet</button> {{greetMessage}}
+</div>
+
+
+<!--Template reference variable-->
+<div>Template reference variable
+    <input #myInput>
+    <button (click)="logInput(myInput)">log input</button>
+</div>
+
+<!-- Two- way- Databinding-->
+<div>Two- way- Databinding--> {{userName}}
+    <p>1st way <input [(ngModel)]="userName"></p>
+    <p>2nd way<input (input)="onInput($event)"></p>
+</div>
