@@ -1,0 +1,4 @@
+<p class="main-container">
+    {{names}} selected {{name}}
+    <app-inner *ngFor="let username of names" [name]="username" (sendInnerEvent)="fromInnerEvent($event)"></app-inner>
+</p>
