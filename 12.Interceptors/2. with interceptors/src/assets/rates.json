@@ -1,0 +1,11 @@
+[{
+        "CurrencyCodeA": "Aud",
+        "CurrencyCodeB": "Usd",
+        "Rate": 0.8683
+    },
+    {
+        "CurrencyCodeA": "Usd",
+        "CurrencyCodeB": "Aud",
+        "Rate": 1.1517
+    }
+]
