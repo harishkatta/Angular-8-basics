@@ -1,0 +1,7 @@
+<p>
+    message-list works!
+</p>
+<div *ngFor="let message of messagelist">
+    <app-message [Message]='message'></app-message>
+</div>
+<ng-content></ng-content>

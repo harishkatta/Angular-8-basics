@@ -1,0 +1,8 @@
+<p>
+    message-list works!
+</p>
+<div *ngFor="let message of messagelist">
+    <app-message #templateRefMessage [Message]='message'></app-message>
+</div>
+<ng-content></ng-content>
+<!-- any projected content in <app-message-list> </<app-message-list> will be place here-->
